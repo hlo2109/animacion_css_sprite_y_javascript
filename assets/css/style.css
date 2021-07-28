@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;  
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  font-family: 'Kiwi Maru', serif;
+}
+
+#contenido{
+  position: fixed;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100vh;
+  /* background-image: url(./../images/uno.jpg); */
+  background-size: cover;
+  background-position: center bottom;
+}
+
+#personaje{
+  position: fixed;
+  bottom: 26%;
+  left:-120px;
+  background-image: url(./../images/quieto.png);
+  height:76px;
+  width:120px;
+  animation-name:quieto;
+  animation-duration: 1s;
+  animation-timing-function: steps(5);
+  animation-iteration-count: infinite;
+}
+@keyframes quieto {
+  from{ background-position-x: 0px; }
+  to{ background-position-x: -600px; }
+}
+#personaje.caminar{
+  background-image: url(./../images/caminar.png);
+  height:79px;
+  animation-name:caminar;
+  animation-timing-function: steps(9);
+}
+@keyframes caminar {
+  from{ background-position-x: 0px; }
+  to{ background-position-x: -1080px; }
+}
+
+#context{
+  position: fixed;
+  left:-450px;
+  top:0px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;  
+  border: 4px #fff solid;
+  border-top: 0px;
+  border-left: 0px;
+  
+  background-color:rgba(255,255,255,0.5);
+}
+
+#conload{
+  position: fixed;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100vh;
+  z-index: 10;
+  line-height: 100vh;
+  background-color:#333;
+  text-align:center;
+  color:#fff;
+  font-size: 40px;
+}
